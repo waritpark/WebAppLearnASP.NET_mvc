@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebAppLearn</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/calendar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebAppLearn.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="container-fluid bg-black-header">
+            <nav class="position-relative nav-header">
+                <ul class="nav flex-row align-items-center">
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="text-sm-center nav-link color-white">
+                    <li><img class="logo-header" src="~/imgs/logo-header.png" alt=""></li></a>
+                    <a class="text-sm-center nav-link color-white" asp-area="" asp-controller="Home" asp-action="Connexion">
+                    <li>Connexion</li></a>
+                    <a class="text-sm-center nav-link color-white" asp-area="" asp-controller="Home" asp-action="Inscription">
+                    <li>Inscription</li></a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="container-fluid bg-color-white">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center flex-row font-family-roboto color-black">
+                <p class="py-4 mx-4 mb-0">Project Calendar</p>
+                <span class="separate-footer">|</span>
+                <p class="py-4 mx-4 mb-0">Arthur <span class="text-uppercase"> Lafarge</span></p>
+                <span class="separate-footer">|</span>
+                <p class="py-4 mx-4 mb-0">© 2022</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/strongMdp.js" asp-append-version="true"></script>
+    <script>
+        // Vérification de l'égalité des mots de passe
+        function checkpass() {
+            var pass = document.getElementById('password').value;
+            var pass2 = document.getElementById('password2').value;
+            var egalpass = document.getElementById("egalpass");
+            if (pass !== pass2) {
+                egalpass.classList.remove('alert-success', 'alert-secondary');
+                egalpass.classList.add('alert', 'alert-danger');
+                egalpass.innerHTML = 'Les mots de passe ne sont pas identiques.';
+            } else if (pass === pass2) {
+                egalpass.classList.remove('alert-danger', 'alert-secondary');
+                egalpass.classList.add('alert', 'alert-success');
+                egalpass.innerHTML = 'Les mots de passe sont identiques.';
+            }
+        };
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,185 @@
+﻿/* hover des td */
+#calendar-table td:hover {
+    transform: scale(1.2);
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+/* fleches de navigation */
+.btn-nav {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    /* box-shadow: 0 6px 10px 0 #0000001a, 0 1px 18px 0 #0000001a, 0 3px 15px -1px #0003; */
+}
+
+.arrow-btn {
+    height: 40px;
+    width: 40px;
+}
+
+.arrow-rotate180 {
+    transform: rotate(180deg);
+}
+
+/* les td qui ne font pas parti du mois */
+.td-hover-none:hover {
+    border-radius: 0 !important;
+    transform: scale(1) !important;
+}
+
+.td-hover-none a:hover {
+    cursor: default !important;
+}
+
+/* Couleur pour chaque mois */
+.td-month-Janvier:hover, .btn-prev-Janvier, .btn-next-Janvier, .ajout-event-Janvier {
+    background-color: rgb(162, 215, 255) !important;
+}
+
+.td-month-Février:hover, .btn-prev-Février, .btn-next-Février, .ajout-event-Février {
+    background-color: rgb(255, 192, 203) !important;
+}
+
+.td-month-Mars:hover, .btn-prev-Mars, .btn-next-Mars, .ajout-event-Mars {
+    background-color: rgb(255, 193, 158) !important;
+}
+
+.td-month-Avril:hover, .btn-prev-Avril, .btn-next-Avril, .ajout-event-Avril {
+    background-color: rgb(255, 221, 158) !important;
+}
+
+.td-month-Mai:hover, .btn-prev-Mai, .btn-next-Mai, .ajout-event-Mai {
+    background-color: rgb(255, 200, 175) !important;
+}
+
+.td-month-Juin:hover, .btn-prev-Juin, .btn-next-Juin, .ajout-event-Juin {
+    background-color: rgb(255, 197, 197) !important;
+}
+
+.td-month-Juillet:hover, .btn-prev-Juillet, .btn-next-Juillet, .ajout-event-Juillet {
+    background-color: rgb(255, 158, 158) !important;
+}
+
+.td-month-Aout:hover, .btn-prev-Aout, .btn-next-Aout, .ajout-event-Aout {
+    background-color: rgb(255, 226, 179) !important;
+}
+
+.td-month-Septembre:hover, .btn-prev-Septembre, .btn-next-Septembre, .ajout-event-Septembre {
+    background-color: rgb(112, 226, 173) !important;
+}
+
+.td-month-Octobre:hover, .btn-prev-Octobre, .btn-next-Octobre, .ajout-event-Octobre {
+    background-color: rgb(228, 188, 255) !important;
+}
+
+.td-month-Novembre:hover, .btn-prev-Novembre, .btn-next-Novembre, .ajout-event-Novembre {
+    background-color: rgb(220, 198, 255) !important;
+}
+
+.td-month-Décembre:hover, .btn-prev-Décembre, .btn-next-Décembre, .ajout-event-Décembre {
+    background-color: rgb(122, 181, 226) !important;
+}
+
+/* titre du calendrier */
+.title-month-Janvier {
+    color: rgb(162, 215, 255) !important;
+}
+
+.title-month-Février {
+    color: rgb(255, 192, 203) !important;
+}
+
+.title-month-Mars {
+    color: rgb(255, 193, 158) !important;
+}
+
+.title-month-Avril {
+    color: rgb(255, 221, 158) !important;
+}
+
+.title-month-Mai {
+    color: rgb(255, 200, 175) !important;
+}
+
+.title-month-Juin {
+    color: rgb(255, 197, 197) !important;
+}
+
+.title-month-Juillet {
+    color: rgb(255, 158, 158) !important;
+}
+
+.title-month-Aout {
+    color: rgb(255, 226, 179) !important;
+}
+
+.title-month-Septembre {
+    color: rgb(112, 226, 173) !important;
+}
+
+.title-month-Octobre {
+    color: rgb(228, 188, 255) !important;
+}
+
+.title-month-Novembre {
+    color: rgb(220, 198, 255) !important;
+}
+
+.title-month-Décembre {
+    color: rgb(122, 181, 226) !important;
+}
+
+/* width - height & left - right */
+#calendar-table {
+    min-height: 500px;
+    max-width: 1700px;
+}
+
+    #calendar-table td {
+        height: 130px;
+    }
+
+/* others */
+.container-calendar-event a {
+    z-index: 2;
+}
+
+    /* transition */
+    .container-calendar-event a:hover {
+        transition: 0.3s ease-in-out;
+    }
+
+/* img day event */
+.img-day-event {
+    width: 30px;
+    height: 30px;
+}
+
+.a-img-day-event {
+    padding: 4px 8px;
+}
+
+/* img API meteo */
+.meteo-img {
+    width: 60px;
+    height: 60px;
+}
+
+.meteo-img-event {
+    width: 130px;
+    height: 130px;
+}
+
+/* formulaire d'ajout d'événement */
+.form-ajout-event {
+    width: 500px;
+}
+
+/* table stats */
+#table-stats tbody tr:first-child {
+    border-bottom: 1px solid #dee2e6;
+}
+
+#table-stats th {
+    width: 16.6%;
+}

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&family=Julius+Sans+One&family=Roboto:wght@300;400&family=Tajawal&display=swap');
+
+/* font */
+.font-family-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-family-julius {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.font-family-taj {
+    font-family: 'Tajawal', sans-serif;
+}
+
+.font-family-exo {
+    font-family: 'Exo', sans-serif;
+}
+
+.font-size70 {
+    font-size: 3rem;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/* color & background */
+.color-green {
+    color: #5EFFBD;
+}
+
+.bg-black-header {
+    background-color: #333333;
+}
+
+.color-black {
+    color: #333333 !important;
+}
+
+.color-white {
+    color: #FFFFFF;
+}
+
+.bg-color-green {
+    background-color: #5EFFBD;
+}
+
+.bg-color-red {
+    background-color: rgb(255,94,94);
+}
+
+.bg-color-yellow {
+    background-color: rgb(255,191,94);
+}
+
+.bg-second {
+    background-color: #333333 !important;
+    color: #FFFFFF;
+}
+
+    .bg-second:hover {
+        background-color: #333333 !important;
+        color: #FFFFFF;
+    }
+
+/* input - textarea - btn focus */
+input:focus {
+    background-color: none !important;
+    box-shadow: none !important;
+}
+
+textarea:focus {
+    box-shadow: none !important;
+}
+
+.btn:focus {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 4px -2px, rgba(0, 0, 0, 0.3) 0px 3px 5px -3px !important;
+}
+
+/* border */
+.border-radius5 {
+    border-radius: 5px;
+}
+
+.border-radius10 {
+    border-radius: 10px;
+}
+
+.border-none {
+    border: none !important;
+}
+
+/* header */
+.bg-black-header nav ul a {
+    border-bottom: 1px solid transparent;
+    padding: 10px 0px !important;
+    margin: 0 15px !important;
+}
+
+    .bg-black-header nav ul a:hover {
+        color: #FFFFFF !important;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .bg-black-header nav ul a:focus {
+        color: #FFFFFF !important;
+    }
+
+    .bg-black-header nav ul a:first-child:hover {
+        border-bottom: none;
+        border-bottom: 1px solid transparent;
+    }
+
+.logo-header {
+    width: 100px;
+    height: 75px;
+}
+
+.btn-deconnexion {
+    margin: 0 1rem !important;
+}
+
+#btn-a-deconnexion:hover {
+    border-bottom: 1px solid transparent !important;
+}
+
+#btn-a-deconnexion:focus {
+    color: #FFFFFF !important;
+}
+
+.border-menu {
+    border: 2px solid #5EFFBD;
+    background-color: #5EFFBD;
+}
+
+#menu-burger {
+    right: 40px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 6000;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(255,255,255);
+}
+
+/* accueil */
+.logo-accueil {
+    width: 390px;
+    height: 300px;
+}
+
+/* footer */
+.bg-color-white {
+    background-color: #F5F5F5;
+}
+
+/* height - width & left - right */
+.height-body {
+    min-height: calc(100vh - 168px);
+}
+
+.height-60 {
+    height: 60px;
+}
+
+.right-70 {
+    right: 70px;
+}
+
+.w-14 {
+    width: 14%;
+}
+
+.w-300 {
+    width: 300px;
+}
+
+.w-800 {
+    width: 800px;
+}
+
+.w-max-content {
+    width: max-content;
+}
+
+.vh-50 {
+    height: 50vh;
+}
+
+.vh-80 {
+    height: 80vh;
+}
+
+.right-0 {
+    right: 0;
+}
+
+/* margin & padding */
+.mt-200px {
+    margin-top: 200px;
+}
+
+.mt-5px {
+    margin-top: 5px;
+}
+
+/* formulaire connexion */
+.label-width {
+    width: 150px;
+}
+
+.w-input {
+    width: calc(100% - 150px);
+}
+
+.box-shadow-submit {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 4px -2px, rgba(0, 0, 0, 0.3) 0px 3px 5px -3px !important;
+}
+
+#password-forget a:hover {
+    color: #333333 !important;
+}
+
+/* jauge de fiabilité de mdp & verif (reprise de bootstrap) */
+.alert {
+    border: none !important;
+    padding: 0.5rem !important;
+}
+
+.alert-secondary {
+    background-color: #F5F5F5 !important;
+    color: #333333 !important;
+}
+
+.alert-danger {
+    background-color: #FF5E5E !important;
+    color: #FFFFFF !important;
+}
+
+.alert-success {
+    background-color: #5EFFBF !important;
+    color: #333333 !important;
+}
+
+.alert-info {
+    background-color: #FFBF5E !important;
+    color: #FFFFFF !important;
+}
+
+
+/***********    responsive    ***********/
+
+@media screen and (max-width: 991px) {
+    body {
+        min-width: 950px;
+    }
+}
