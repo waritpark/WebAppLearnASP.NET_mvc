@@ -1,4 +1,6 @@
-﻿@{
+﻿@model UsersModel
+
+@{
     ViewData["Inscription"] = "Inscription";
 }
 <h1>@ViewData["Title"]</h1>
@@ -7,27 +9,31 @@
     <div class="row text-center justify-content-center">
         <div class="col-8 col-xl-6">
             <h2 class="color-green text-uppercase fw-bold">Inscription</h2>
-            <form action="" method="post" class="mt-4">
+            <form asp-controller="Home" asp-action="InscriptionPost" method="post" class="mt-4">
                 <div class="mb-3">
                     <label for="email" class="form-label">Adresse mail</label>
-                    <input type="email" class="form-control" id="email" name="email">
+                    <input type="email" asp-for="Email" class="form-control" id="email" name="Email">
+                    <span class="text-danger" asp-validation-for="Email"></span>
                 </div>
                 <div class="mb-3">
                     <label for="name" class="form-label">Nom</label>
-                    <input type="text" class="form-control" name="name" id="name">
+                    <input type="text" asp-for="Nom" class="form-control" name="Nom" id="name">
+                    <span class="text-danger" asp-validation-for="Nom"></span>
                 </div>
                 <div class="mb-3">
                     <label for="prenom" class="form-label">Prénom</label>
-                    <input type="text" class="form-control" name="prenom" id="prenom">
+                    <input type="text" asp-for="Prenom" class="form-control" name="Prenom" id="prenom">
+                    <span class="text-danger" asp-validation-for="Prenom"></span>
                 </div>
                 <div class="">
                     <label for="password" class="form-label">Mot de passe</label>
-                    <input type="password" autocomplete="off" onkeyup="logKey()" class="form-control" name="password" id="password">
+                    <input type="password" asp-for="Password" autocomplete="off" onkeyup="logKey()" class="form-control" name="Password" id="password">
+                    <span class="text-danger" asp-validation-for="Password"></span>
                 </div>
                 <div class="alert alert-secondary" id="passwordStrength">Jauge de fiabilité du mot de passe</div>
                 <div class="">
                     <label for="password2" class="form-label">Répétez le mot de passe</label>
-                    <input type="password" onkeyup="checkpass()" autocomplete="off" class="form-control" name="password2" id="password2">
+                    <input type="password" onkeyup="checkpass()" autocomplete="off" class="form-control" name="Password2" id="password2">
                 </div>
                 <div class="alert alert-secondary" id="egalpass">Vérification de l'égalité vos mots de passe</div>
                 <button type="submit" class="box-shadow-submit btn bg-color-white px-4 py-2 w-auto mt-2 mb-4">Inscription</button>
