@@ -9,7 +9,7 @@ Suivi du projet :
   - Routage
   - Razor
 
-19/12/2022 :
+19-20/12/2022 :
 - Mise en place d'une bdd : 
   - Explorateur d'objets SQL server
   - Fichier appsettings.json
