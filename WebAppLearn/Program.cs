@@ -29,4 +29,8 @@ static void NewMethod(WebApplication app)
     app.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    app.MapControllerRoute(
+        name: "Calendar",
+        pattern: "{controller=Calendar}/{action=Index}/{id?}");
 }

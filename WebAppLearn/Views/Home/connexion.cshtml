@@ -1,4 +1,9 @@
-﻿@{
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model UsersModel
+
+@{
     ViewData["Connexion"] = "Connexion";
 }
 <h1>@ViewData["Title"]</h1>
@@ -6,7 +11,7 @@
 <div class="height-body d-flex justify-content-center flex-column container">
     <div class="row text-center justify-content-center">
         <div class="col-7 col-xl-6">
-            <p>@viewBag.Result</p>
+            <p>@ViewData["message"]</p>
             <h2 class="color-green text-uppercase fw-bold">Connexion</h2>
             <form asp-controller="Home" asp-action="ConnexionPost" method="post" class="mt-4">
                 <div class="mb-3">

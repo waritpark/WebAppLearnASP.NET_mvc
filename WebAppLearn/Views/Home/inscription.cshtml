@@ -1,44 +1,46 @@
-﻿@model UsersModel
+﻿@model WebAppLearn.Models.UsersModel
 
 @{
-    ViewData["Inscription"] = "Inscription";
+    ViewData["Title"] = "Inscription";
 }
-<h1>@ViewData["Title"]</h1>
 
+<h1>Inscription</h1>
+
+<hr />
 <div class="height-body container d-flex justify-content-center flex-column mt-4">
     <div class="row text-center justify-content-center">
         <div class="col-8 col-xl-6">
+            <p>@ViewData["message"]</p>
             <h2 class="color-green text-uppercase fw-bold">Inscription</h2>
-            <form asp-controller="Home" asp-action="InscriptionPost" method="post" class="mt-4">
+            <form asp-action="Inscription" class="mt-4">
                 <div class="mb-3">
-                    <label for="email" class="form-label">Adresse mail</label>
-                    <input type="email" asp-for="Email" class="form-control" id="email" name="Email">
+                    <label asp-for="Email" class="form-label">Adresse mail</label>
+                    <input asp-for="Email" type="email" class="form-control" id="Email" name="Email">
                     <span class="text-danger" asp-validation-for="Email"></span>
                 </div>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Nom</label>
-                    <input type="text" asp-for="Nom" class="form-control" name="Nom" id="name">
+                    <label asp-for="Nom" class="form-label">Nom</label>
+                    <input asp-for="Nom" type="text" class="form-control" name="Nom" id="Nom">
                     <span class="text-danger" asp-validation-for="Nom"></span>
                 </div>
                 <div class="mb-3">
-                    <label for="prenom" class="form-label">Prénom</label>
-                    <input type="text" asp-for="Prenom" class="form-control" name="Prenom" id="prenom">
+                    <label asp-for="Prenom" class="form-label">Prénom</label>
+                    <input asp-for="Prenom" type="text" class="form-control" name="Prenom" id="Prenom">
                     <span class="text-danger" asp-validation-for="Prenom"></span>
                 </div>
                 <div class="">
-                    <label for="password" class="form-label">Mot de passe</label>
-                    <input type="password" asp-for="Password" autocomplete="off" onkeyup="logKey()" class="form-control" name="Password" id="password">
+                    <label asp-for="Password" class="form-label">Mot de passe</label>
+                    <input asp-for="Password" type="password" autocomplete="off" onkeyup="logKey()" class="form-control" name="Password" id="Password">
                     <span class="text-danger" asp-validation-for="Password"></span>
                 </div>
                 <div class="alert alert-secondary" id="passwordStrength">Jauge de fiabilité du mot de passe</div>
                 <div class="">
                     <label for="password2" class="form-label">Répétez le mot de passe</label>
-                    <input type="password" onkeyup="checkpass()" autocomplete="off" class="form-control" name="Password2" id="password2">
+                    <input type="password" onkeyup="checkpass()" autocomplete="off" class="form-control" name="Password2" id="Password2">
                 </div>
                 <div class="alert alert-secondary" id="egalpass">Vérification de l'égalité vos mots de passe</div>
-                <button type="submit" class="box-shadow-submit btn bg-color-white px-4 py-2 w-auto mt-2 mb-4">Inscription</button>
+                <input type="submit" class="box-shadow-submit btn bg-color-white px-4 py-2 w-auto mt-2 mb-4" value="Inscription" />
             </form>
         </div>
     </div>
 </div>
-

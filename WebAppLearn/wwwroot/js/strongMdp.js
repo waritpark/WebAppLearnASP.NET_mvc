@@ -1,7 +1,7 @@
 // vérifier la complexité du mdp
 
 function logKey() {
-    var mdp = document.getElementById('password').value;
+    var mdp = document.getElementById('Password').value;
     var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
     var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
     var okRegex = new RegExp("(?=.{6,}).*", "g");
