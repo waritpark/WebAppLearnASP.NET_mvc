@@ -29,3 +29,11 @@ Modifications de la requete sql :
 - ajout de la préparation de la requete
 - vérification de l'adresse mail pour ne pas créer plusieurs comptes avec la même adresse mail.
 - asp-validation-for utilisé lors de l'inscription
+
+04/01/2023 :
+- Réalisation de la connexion
+- documentation hashage
+- Ajout de hashage de mot de passe (Pbkdf2, déconseillé dans la doc, mauvaise pratique)
+- Modification du hashage pour Identity (bonne pratique)
+- documentation session
+- documentation routage
