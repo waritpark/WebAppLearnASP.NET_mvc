@@ -18,3 +18,14 @@ Suivi du projet :
   - Package System.Data.SqlClient
   - Package Microsoft.EntityFrameworkCore
 - Première requete sql "inscription"
+
+03/01/2023 :
+- Utilisation du dictionnaire "ViewData", qui permet de passer des
+données entre le contrôleur et la vue.
+
+- refonte des views en utilisant correctement le moteur de template Razor.
+
+Modifications de la requete sql :
+- ajout de la préparation de la requete
+- vérification de l'adresse mail pour ne pas créer plusieurs comptes avec la même adresse mail.
+- asp-validation-for utilisé lors de l'inscription
