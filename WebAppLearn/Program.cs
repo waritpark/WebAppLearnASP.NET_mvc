@@ -24,6 +24,7 @@ NewMethod(app);
 
 app.Run();
 
+// MyDisplayRouteInfo est fourni par le package NuGet Rick.Docs.Samples.RouteInfo et affiche les informations de routage.
 static void NewMethod(WebApplication app)
 {
     app.MapControllerRoute(
